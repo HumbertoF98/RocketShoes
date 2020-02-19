@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MdAddShoppingCart } from 'react-icons/md';
 import api from '../../services/api';
+import { formatPrice } from '../../util/format';
 
 
 import { ProductList } from './styles';
@@ -26,7 +27,7 @@ export default class Home extends Component {
               alt={product.title}
             />
             <strong>{product.title}</strong>
-            <span>{product.price}</span>
+            <span>{formatPrice(product.price)}</span>
             <button type="button">
               <div>
                 <MdAddShoppingCart size={16} color="#FFF" /> 3
