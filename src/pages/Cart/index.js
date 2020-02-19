@@ -2,5 +2,7 @@ import React from 'react';
 
 
 export default function Cart() {
-  return <div></div>;
+  return <div>
+    <h1>carrinho</h1>
+  </div>;
 }
