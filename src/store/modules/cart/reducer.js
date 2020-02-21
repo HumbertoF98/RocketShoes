@@ -3,7 +3,7 @@ import produce from 'immer';
 export default function cart(state = [], action) {
   // esse switch garante que o reducer só ouça a ação ADD_TO_CART, já que todos os reducers são ativados no dispatch
   switch (action.type) {
-    case '@cart/ADD':
+    case '@cart/SUCCESS':
       return produce(state, draft => {
         const productIndex = draft.findIndex(p => p.id === action.product.id);
         if (productIndex >= 0) {
